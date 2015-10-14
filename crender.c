@@ -35,6 +35,15 @@ static const uint64_t MATRIX_FIELDS=26;
 #define _visible 24
 #define _visible_faces 25
 
+// Functions declaration.
+int RectAnnulusIntersect(double rad1, double rad2,
+                         double astart, double aend, double rx, double ry,
+                         double rw, double rh, double cx, double cy);
+int SegmentArcIntersect(double R,
+                        double astart, double aend,
+                        double aX, double aY,
+                        double bX, double bY);
+
 //void *test(uint32_t rows, uint32_t cols, double *a, void *callback(uint32_t index));
 
 void *test(uint64_t rows, uint64_t cols, double *a, void *callback(uint64_t index)){
